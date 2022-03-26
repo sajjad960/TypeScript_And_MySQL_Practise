@@ -1,0 +1,8 @@
+typescript compilar
+need -> tsc
+if we want to run typescript code directly
+-> ts-node
+Api layer who accept requests
+-> express
+For test api in vs-code
+-> thunder client
