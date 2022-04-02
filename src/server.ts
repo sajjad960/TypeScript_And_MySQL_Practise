@@ -1,9 +1,11 @@
 import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
+import cors from 'cors'
 
 
 //geting env
 dotenv.config({ path: `${__dirname}/config.env` });
+
 
 
 // connecting to remote db
