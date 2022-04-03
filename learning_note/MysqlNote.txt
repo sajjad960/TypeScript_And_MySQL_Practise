@@ -1,0 +1,7 @@
+                    💥ROOT LOGGED USER
+for showing database
+-> show databases;
+for showing users
+-> SELECT User, Host FROM mysql.user;
+for drop users
+->DROP USER 'fuck'@'%';
