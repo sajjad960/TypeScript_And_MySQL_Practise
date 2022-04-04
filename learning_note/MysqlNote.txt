@@ -4,4 +4,8 @@ for showing database
 for showing users
 -> SELECT User, Host FROM mysql.user;
 for drop users
-->DROP USER 'fuck'@'%';
+->DROP USER 'username'@'%';
+if not connecting from localhost, allow granting
+https://www.digitalocean.com/community/tutorials/how-to-allow-remote-access-to-mysql
+-> GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'sammy'@'remote_server_ip' WITH GRANT OPTION;
+
