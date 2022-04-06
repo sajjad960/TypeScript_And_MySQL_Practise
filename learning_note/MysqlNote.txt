@@ -6,7 +6,10 @@ for showing users
 for drop users
 ->DROP USER 'username'@'%';
 for create user
-CREATE DATABASE [IF NOT EXISTS] database_name
+->CREATE DATABASE [IF NOT EXISTS] database_name
+for change user pass
+-> ALTER USER 'userName'@'localhost' IDENTIFIED BY 'New-Password-Here';
+
 
 
 if not connecting from localhost, allow granting
