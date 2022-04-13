@@ -24,7 +24,8 @@
     "nodemon": "^2.0.15",
     "sequelize": "^6.17.0",
     "ts-node": "^10.7.0",
-    "tsc": "^2.0.4"
+    "tsc": "^2.0.4",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "typescript": "^4.6.3"
