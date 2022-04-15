@@ -1,7 +1,11 @@
 import { Sequelize, DataTypes } from 'sequelize';
 import validator from 'validator';
 
-const sequelize = new Sequelize;
+// const sequelize = new Sequelize;
+const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
+    host: process.env.DB_HOST,
+    dialect: "mysql" /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
+});
 
 
 const User = sequelize.define('user', {
@@ -32,14 +36,11 @@ const User = sequelize.define('user', {
     },
     password: {
         type: DataTypes.STRING,
-        validate: {
-            notNull: {
-                msg: 'Please Provide a password',
-            },
-        }
+        allowNull: false,
     },
     passwordConfirm: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
             function(el: any) {
                 return el === this.password
@@ -67,3 +68,13 @@ const User = sequelize.define('user', {
 
 });
 
+
+User.create({
+    name: "sajjad",
+    email: "check@gmail.com",
+    role: "admin",
+    password: "sajjad5522",
+    passwordConfirm: "sajjad5522"
+
+}).then((data: any) => console.log(data)
+)
