@@ -1,0 +1,16 @@
+{
+  "name": "basic_mysql_practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon database_connection.js"
+  },
+  "author": "sajjad",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19"
+  }
+}

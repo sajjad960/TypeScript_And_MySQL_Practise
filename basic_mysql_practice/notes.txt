@@ -1,0 +1,5 @@
+// connection error, create user with password
+ CREATE USER 'sajjad'@'localhost' IDENTIFIED BY 'sajjad960';
+
+ // without restart reload mysql
+ flush privileges;
