@@ -4,9 +4,10 @@ const app = express();
 //Security packages
 import cors from 'cors';
 
-//For Routers
+//For Routers Import
+import userRouter from './routes/userRoutes';
 
-//For Error
+//For Error Import
 import AppError from './utils/AppError';
 import globalErrorHandler from './controllers/errorController'
 
@@ -21,6 +22,9 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 //Routes
+const prefix = "/api/v1"
+
+app.use(`${prefix}/users`, userRouter)
 
 //If app not found any api route
 app.all("*", (req, res, next) => {

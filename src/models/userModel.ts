@@ -1,11 +1,11 @@
 import { Sequelize, DataTypes } from 'sequelize';
 import validator from 'validator';
 
-// const sequelize = new Sequelize;
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
-    host: process.env.DB_HOST,
-    dialect: "mysql" /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
-});
+const sequelize = new Sequelize;
+// const sequelize = new Sequelize('testdb', 'root', 'sajjad960', {
+//     host: 'localhost',
+//     dialect: 'mysql' /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
+//   });
 
 
 const User = sequelize.define('user', {
@@ -78,3 +78,5 @@ User.create({
 
 }).then((data: any) => console.log(data)
 )
+
+export = User;

@@ -23,6 +23,6 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true
   },
-  "include": ["./src/**/*.tsx", "./src/**/*.ts"],
+  "include": ["./src/**/*.tsx", "./src/**/*.ts", "src/models/db.js"],
   "exclude": ["node_modules"]
 }
